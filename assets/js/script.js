@@ -48,7 +48,8 @@ function createTaskCard(task) {
 // Todo: create a function to render the task list and make cards draggable
 function renderTaskList() {
     const taskListContainer = document.getElementById('taskListContainer');
-
+    taskListContainer.innerHTML = '';
+    
     taskList.forEach(task => {
         const taskCard = createTaskCard(task);
         taskListContainer.appendChild(taskCard);
@@ -78,7 +79,7 @@ function handleAddTask(event) {
         taskList.push(newTask);
         localStorage.setItem("tasks", JSON.stringify(taskList));
         renderTaskList();
-        $('#staticBackdrop').modal('hide');
+        $('#formModal').modal('hide');
         document.getElementById('form').reset();
     } else {
         alert('Please fill in all fields.');
@@ -116,8 +117,7 @@ $(document).ready(function () {
         drop: function (event, ui) {
             const card = ui.draggable;
             const taskId = card.attr('data-task-id');
-            const targetLaneId = $(this).attr('id');
-            const targetLane = $(this).find('.card-container');
+            const targetLane = $(this);
 
             // Move the card to the target lane
             card.appendTo(targetLane);
