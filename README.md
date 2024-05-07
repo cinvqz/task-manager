@@ -7,11 +7,13 @@ This application was created to provide a tool for users to manage tasks. This a
 The webpage includes a user-friendly interface created with various technologies such as HTML, CSS , Javascript, Day.js and Bootstrap.
 
 ## Installation
+To access the deployed application use this link:
+https://cinvqz.github.io/task-manager/
 
 To access the project content:
    ```python
     1. Use this link to the project repo
-    https://github.com/cinvqz/employee-payroll-tracker/tree/main
+    https://github.com/cinvqz/task-manager
    ```
     2. Use comand git clone to clone the repo
 
